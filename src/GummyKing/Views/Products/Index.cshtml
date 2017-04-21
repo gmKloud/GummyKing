@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TravelBlog.Models.Experience>
+﻿@model IEnumerable<GummyKing.Models.Product>
 
 @{
     ViewData["Title"] = "Gummy King";
@@ -10,9 +10,13 @@
 
 <h2>Some exciting statement</h2>
 
+<h3>@Html.ActionLink("Add a New Gummy King", "Create")</h3>
+
     @foreach (var listprod in Model)
     { 
-        <h2>@Html.DisplayFor(model => listprod.Name)</h2>
-        <h2><em>@Html.DisplayFor(model => listprod.Price)</em></h2>
-        //<h3>@Html.DisplayFor(model => listprod.Country.Name)</h3>
+        <h2>@Html.DisplayFor(modelItem => listprod.Name)</h2>
+        <h2><em>@Html.DisplayFor(modelItem => listprod.Price)</em></h2>
+       
+    <h3>@*@Html.DisplayFor(model => listprod.Country.Name)*@</h3>
+        
     }
