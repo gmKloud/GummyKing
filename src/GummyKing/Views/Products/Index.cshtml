@@ -1,6 +1,18 @@
 ﻿@model IEnumerable<TravelBlog.Models.Experience>
 
 @{
-    ViewData["Title"] = "Travel Blog";
+    ViewData["Title"] = "Gummy King";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+<h2>List of Gummy King Products</h2>
+
+<h2>Some exciting statement</h2>
+
+    @foreach (var listprod in Model)
+    { 
+        <h2>@Html.DisplayFor(model => listprod.Name)</h2>
+        <h2><em>@Html.DisplayFor(model => listprod.Price)</em></h2>
+        //<h3>@Html.DisplayFor(model => listprod.Country.Name)</h3>
+    }
