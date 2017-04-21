@@ -62,7 +62,7 @@ namespace GummyKing.Controllers
         public IActionResult Delete(int id)
         {
             var thisProd = db.Products.FirstOrDefault(p => p.ProductId == id);
-            return (thisProd);
+            return View(thisProd);
         }
 
         //POST - Delete Product
