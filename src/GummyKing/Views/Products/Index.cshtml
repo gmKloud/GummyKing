@@ -10,13 +10,23 @@
 
 <h2>Some exciting statement</h2>
 
-<h3>@Html.ActionLink("Add a New Gummy King", "Create")</h3>
+<h3>@Html.ActionLink("Add a New Gummy", "Create")</h3>
 
     @foreach (var listprod in Model)
     { 
+    <div class="foreach">
         <h2>@Html.DisplayFor(modelItem => listprod.Name)</h2>
         <h2><em>@Html.DisplayFor(modelItem => listprod.Price)</em></h2>
-       
-    <h3>@*@Html.DisplayFor(model => listprod.Country.Name)*@</h3>
+    <h3>@Html.DisplayFor(model => listprod.Country.Name)</h3>
+
+        <div class="to-dt">
+            <h4>@Html.ActionLink("Details", "Details", new { id = listprod.ProductId })</h4>
+        </div>
+        <div class="to-del">
+            <h4>@Html.ActionLink("Delete", "Delete", new { id = listprod.ProductId })</h4>
+        </div>
+
+
+    </div>
         
     }

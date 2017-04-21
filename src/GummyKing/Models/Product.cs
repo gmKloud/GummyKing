@@ -13,6 +13,7 @@ namespace GummyKing.Models
         public string Name { get; set; }
         public int Price { get; set; }
         public int CountryId { get; set; }
+        public virtual Country Country { get; set; }
 
     }
 }

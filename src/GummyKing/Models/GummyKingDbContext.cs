@@ -12,8 +12,8 @@ namespace GummyKing.Models
             {
             }
 
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

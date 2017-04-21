@@ -11,15 +11,37 @@
     
     </div><!--img-->
     <div class="name">
-        <h3>@Html.DisplayNameFor(model => Model.Name) : </h3>
-        <h2>@Html.DisplayFor(model => Model.Name)</h2> 
+        <h3>@Html.DisplayNameFor(model => model.Name) : </h3>
+        <h2>@Html.DisplayFor(model => model.Name)</h2> 
     </div><!-- .name-->
     <div class="price">
-        <h3>@Html.DisplayNameFor(model => Model.Price) : </h3>
-        <h2>@Html.DisplayFor(model => Model.Price)</h2> 
+        <h3>@Html.DisplayNameFor(model => model.Price) : </h3>
+        <h2>@Html.DisplayFor(model => model.Price)</h2> 
     </div><!-- price-->
 
 </div><!--.dt-->
+
+<hr />
+
+<div class="ed-form">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.ProductId)
+
+        @Html.LabelFor(model => Model.Name)
+        @Html.EditorFor(model => Model.Name)
+
+        @Html.LabelFor(model => Model.Price)
+        @Html.EditorFor(model => Model.Price)
+
+        @Html.DropDownList("CountryId")
+
+        <input type="submit" value="Save" />
+    }
+
+</div>
+
+<hr />
 
 
 <h4>@Html.ActionLink("Back to List", "Index")</h4>

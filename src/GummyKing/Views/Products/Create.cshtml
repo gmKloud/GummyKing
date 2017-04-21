@@ -1,1 +1,21 @@
-﻿
+﻿@model GummyKing.Models.Product
+
+@{
+    ViewData["Title"] = "Gummy King";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Enter Gummy's Info</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.Price)
+    @Html.EditorFor(model => model.Price)
+    @Html.DropDownList("CountryId")
+    <input type="submit" value="Add A New Gummy" />
+}
+
+<p>@Html.ActionLink("Home", "Index")</p>
