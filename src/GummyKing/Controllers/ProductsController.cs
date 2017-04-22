@@ -31,15 +31,13 @@ namespace GummyKing.Controllers
         }
 
         //POST - Update Products - in Details
-        [HttpPost]
+        [HttpPost, ActionName("Save")]
         public IActionResult Details(Product product)
         {
             db.Entry(product).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-
 
         //Get - Products Create
         public IActionResult Create()
@@ -58,24 +56,24 @@ namespace GummyKing.Controllers
         }
 
         //Get - Update Products
-        public IActionResult Update(int id)
-        {
-            ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
-            var thisProd = db.Products.FirstOrDefault(p => p.ProductId == id);
-            return View(thisProd);
-        }
+        //public IActionResult Update(int id)
+        //{
+        //    ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
+        //    var thisProd = db.Products.FirstOrDefault(p => p.ProductId == id);
+        //    return View(thisProd);
+        //}
 
 
         //Get Delete Product
-        public IActionResult Delete(int id)
-        {
-            var thisProd = db.Products.FirstOrDefault(p => p.ProductId == id);
-            return View(thisProd);
-        }
+        //public IActionResult Delete(int id)
+        //{
+        //    var thisProd = db.Products.FirstOrDefault(p => p.ProductId == id);
+        //    return View(thisProd);
+        //}
 
         //POST - Delete Product
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteCondfirmed(int id)
+        [HttpPost, ActionName("Details")]
+        public IActionResult DeleteConfirmed(int id)
         {
             var thisProd = db.Products.FirstOrDefault(p => p.ProductId == id);
             db.Products.Remove(thisProd);

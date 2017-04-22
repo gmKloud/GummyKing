@@ -43,5 +43,11 @@
 
 <hr />
 
+<h2>Delete : <em>@Html.DisplayFor(model => model.Name), @Html.DisplayFor(model => model.Price)<em></h2>
+
+@using (Html.BeginForm())
+{
+    <input type="Submit" value="Delete" />
+}
 
 <h4>@Html.ActionLink("Back to List", "Index")</h4>

@@ -1,1 +1,11 @@
-﻿
+﻿@model GummyKing.Models.Product
+
+
+<h2>Delete : <em>@Html.DisplayFor(model => model.Name), @Html.DisplayFor(model => model.Price)<em></h2>
+
+@using (Html.BeginForm())
+{
+    <input type="Submit" value="Delete" />
+}
+
+<p>@Html.ActionLink("Index", "Index")</p>
