@@ -24,6 +24,7 @@
 <hr />
 
 <div class="ed-form">
+    <h2>Edit</h2>
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(model => model.ProductId)
@@ -37,17 +38,13 @@
         @Html.DropDownList("CountryId")
 
         <input type="submit" value="Save" />
+
     }
 
 </div>
 
 <hr />
+<h4>@Html.ActionLink("Delete Gummy", "Delete", new { id = Model.ProductId })</h4>
 
-<h2>Delete : <em>@Html.DisplayFor(model => model.Name), @Html.DisplayFor(model => model.Price)<em></h2>
-
-@using (Html.BeginForm())
-{
-    <input type="Submit" value="Delete" />
-}
-
+<hr />
 <h4>@Html.ActionLink("Back to List", "Index")</h4>
