@@ -43,6 +43,12 @@ namespace GummyKing.Controllers
         //Get - Products Create
         public IActionResult Create()
         {
+//            new List<SelectList>
+//{
+//    new SelectList { Name = "USA", Selected = true},
+//    new SelectListItem { Name = "Mexico"},
+//    new SelectListItem { Name = "China"}
+//}, "Select Country"
             ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
             return View();
         }
