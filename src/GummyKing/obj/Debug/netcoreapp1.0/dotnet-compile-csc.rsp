@@ -200,6 +200,8 @@
 "C:\Users\epicodus\Desktop\GummyKing\src\GummyKing\Migrations\20170421193105_Initial.Designer.cs"
 "C:\Users\epicodus\Desktop\GummyKing\src\GummyKing\Migrations\20170421193421_MakeTableNamesPlural.cs"
 "C:\Users\epicodus\Desktop\GummyKing\src\GummyKing\Migrations\20170421193421_MakeTableNamesPlural.Designer.cs"
+"C:\Users\epicodus\Desktop\GummyKing\src\GummyKing\Migrations\20170428000259_load.cs"
+"C:\Users\epicodus\Desktop\GummyKing\src\GummyKing\Migrations\20170428000259_load.Designer.cs"
 "C:\Users\epicodus\Desktop\GummyKing\src\GummyKing\Migrations\GummyKingDbContextModelSnapshot.cs"
 "C:\Users\epicodus\Desktop\GummyKing\src\GummyKing\Models\Country.cs"
 "C:\Users\epicodus\Desktop\GummyKing\src\GummyKing\Models\GummyKingDbContext.cs"

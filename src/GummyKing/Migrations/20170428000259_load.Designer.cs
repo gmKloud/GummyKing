@@ -8,9 +8,10 @@ using GummyKing.Models;
 namespace GummyKing.Migrations
 {
     [DbContext(typeof(GummyKingDbContext))]
-    partial class GummyKingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170428000259_load")]
+    partial class load
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
